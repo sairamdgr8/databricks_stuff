@@ -1,0 +1,16 @@
+https://spark.apache.org/docs/3.0.0/api/python/pyspark.sql.html#pyspark.sql.DataFrame
+
+
+https://spark.apache.org/docs/3.0.0/api/python/pyspark.sql.html
+
+
+https://sparkbyexamples.com/pyspark/pyspark-aggregate-functions/
+
+
+==============================
+some functions misclalenous
+
+https://sparkbyexamples.com/spark/how-to-pivot-table-and-unpivot-a-spark-dataframe/
+
+-- pivot and unpivot
+-- skewness

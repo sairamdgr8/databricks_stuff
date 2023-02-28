@@ -1,0 +1,387 @@
+﻿QUERY_TEXT,SESSION_ID
+"Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name in ('DEMO')
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+--and (start_time) >'2021-12-08 22:30:05.758 -0800'
+group by query_text,session_id",5217607689
+"Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name in ('DEMO','METADATA')
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and (start_time) >'2021-12-08 22:30:05.758 -0800'
+group by query_text,session_id",5217607689
+"select (start_time) from table (information_schema.query_history())
+
+Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name in ('DEMO','METADATA')
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and (start_time) >'2021-12-08 22:30:05.758 -0800'
+group by query_text,session_id",5217607689
+"select (start_time) from table (information_schema.query_history())
+
+Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name =['DEMO','METADATA']
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and (start_time) >'2021-12-08 22:30:05.758 -0800'
+group by query_text,session_id",5217607689
+"Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and (start_time) >'2021-12-08 22:30:05.758 -0800'
+group by query_text,session_id",5217599501
+select (start_time) from table (information_schema.query_history()),5217599501
+select max(start_time) from table (information_schema.query_history()),5217599501
+"Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by session_id",5217599501
+"Select
+session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by session_id",5217599501
+"Select
+*
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'",5217599501
+"Select
+*
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by query_text,session_id",5217599501
+"Select
+query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by session_id",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by session_id",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+and ERROR_MESSAGE ilike '%SQL compilatio%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE_TABLE'
+and start_time ='2021-12-06 00:48:25.731 -0800'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE_TABLE'
+and start_time ='2021-12-06'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE_TABLE'
+and start_time ='2021-12-06 '
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+and Query_type = 'CREATE'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+order by start_time desc",5217599501
+"Select
+query_text,
+database_name,
+schema_name,
+query_type
+from table (information_schema.query_history())
+where database_name ='DEMO'
+order by start_time",5217599501
+ROLLBACK,5217587309
+USE SCHEMA DEMO.PUBLIC;,5217587309
+ROLLBACK,5217591445
+USE SCHEMA DEMO.PUBLIC;,5217591445
+CREATE SCHEMA IF NOT EXISTS PUBLIC;,5217591445
+"CREATE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_4
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217591437
+ROLLBACK,5217587289
+CREATE DATABASE IF NOT EXISTS DEMO;,5217587289
+COMMIT,5217591425
+"Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and max(start_time) ='2021-12-06'
+group by query_text,session_id",5217599501
+"Select
+query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by query_text,session_id",5217599501
+"Select
+query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by query_text,session_id",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE'
+order by start_time desc",5217599501
+"Select
+query_text,
+database_name,
+schema_name,
+query_type
+from information_schema.query_history
+where database_name ='Demo'
+order by start_time",5217599501
+"CREATE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_4
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217587309
+"CREATEE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_5
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217591445
+ALTER SESSION SET autocommit=False,5217591445
+"CREATE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_4
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217587289
+"CREATE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_3
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+)",5217591425
+CREATE DATABASE IF NOT EXISTS DEMO;,5217591445
+"Select
+query_text,session_id
+--query_text,session_id
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+group by query_text,session_id",5217599501
+"Select
+query_text
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilation%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and ERROR_MESSAGE ilike '%SQL compilatio%'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE_TABLE'
+--and start_time ='2021-12-06'
+order by start_time desc",5217599501
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+and Query_type = 'CREATE_TABLE'
+order by start_time desc",5217599501
+"Select
+query_text,
+database_name,
+schema_name,
+query_type
+from table (information_schema.query_history())
+where database_name ='DEMO'
+order by start_time desc",5217599501
+"Select
+query_text,
+database_name,
+schema_name,
+query_type
+from table (information_schema.query_history())
+where database_name ='Demo'
+order by start_time",5217599501
+ALTER SESSION SET autocommit=False,5217591437
+ALTER SESSION SET autocommit=False,5217587289
+CREATE SCHEMA IF NOT EXISTS PUBLIC;,5217591425
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE_TABLE'
+and date(start_time) ='2021-12-06'
+order by start_time desc",5217599501
+"CREATEE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_5
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217587309
+ALTER SESSION SET autocommit=False,5217587309
+"CREATE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_4
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217591445
+"CREATEE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_5
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217591437
+"CREATEE OR REPLACE TABLE DEMO.PUBLIC.EY_DEMO_5
+(
+     TRIPDURATION INTEGER
+    ,STARTTIME TIMESTAMP
+    ,STOPTIME TIMESTAMP
+    ,START_STATION_ID INTEGER
+    ,START_STATION_NAME STRING
+    ,GENDER INTEGER
+    ,DESTINATION_STATION_ID INTEGER
+    ,DESTINATION_STATION_NAME STRING
+);",5217587289
+CREATE SCHEMA IF NOT EXISTS PUBLIC;,5217591437
+CREATE SCHEMA IF NOT EXISTS PUBLIC;,5217587289
+ROLLBACK,5217591437
+USE SCHEMA DEMO.PUBLIC;,5217591425
+"Select
+*
+from table (information_schema.query_history())
+where database_name ='DEMO'
+--and Query_type = 'CREATE_TABLE'
+order by start_time desc",5217599501
+CREATE SCHEMA IF NOT EXISTS PUBLIC;,5217587309
+CREATE DATABASE IF NOT EXISTS DEMO;,5217591437
+CREATE DATABASE IF NOT EXISTS DEMO;,5217587309
+USE SCHEMA DEMO.PUBLIC;,5217591437
+USE SCHEMA DEMO.PUBLIC;,5217587289

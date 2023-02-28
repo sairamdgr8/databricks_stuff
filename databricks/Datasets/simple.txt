@@ -1,0 +1,4 @@
+name age salary
+sai 25 1000
+bum 30 1500
+che 40 null

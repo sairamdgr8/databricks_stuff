@@ -1,0 +1,13 @@
+  
+{
+	"data_sources": {
+	
+	"csv": {
+			"CryptoMarkets": "crypto-markets.csv"
+		},
+		
+		"sql":{
+		"query1":"select * from sales_tab limit 3"
+		}
+	}
+}

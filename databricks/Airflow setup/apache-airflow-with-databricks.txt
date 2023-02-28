@@ -1,0 +1,8 @@
+apache-airflow-with-databricks
+
+pip install on databricks
+Library source pypi:pip install --upgrade "git+git://github.com/databricks/incubator-airflow.git@1.8.1-db1#egg=apache-airflow[databricks]"
+
+https://databricks.com/blog/2017/07/19/integrating-apache-airflow-with-databricks.html
+
+

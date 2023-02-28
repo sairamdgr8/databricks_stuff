@@ -1,0 +1,3 @@
+---important notes
+
+https://kontext.tech/column/spark/286/implement-scd-type-2-full-merge-via-spark-data-frames

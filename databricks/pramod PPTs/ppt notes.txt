@@ -1,0 +1,78 @@
+1) repartiton and coalese
+
+
+𝑾𝒉𝒂𝒕 𝒊𝒔 𝑪𝒐𝒂𝒍𝒆𝒔𝒄𝒆?
+The coalesce method reduces the number of partitions in a DataFrame. Coalesce avoids full shuffle, instead of creating new partitions, it shuffles the data using Hash Partitioner (Default) and adjusts into existing partitions, this means it can only decrease the number of partitions. Hence, some of the executors which have less amount of data to process will sit idle after completing the task assigned to them, and others with more data will be working.
+
+𝑾𝒉𝒂𝒕 𝒊𝒔 𝑹𝒆𝒑𝒂𝒓𝒕𝒊𝒕𝒊𝒐𝒏𝒊𝒏𝒈?
+The repartition method can be used to either increase or decrease the number of partitions in a DataFrame. Repartition is a full Shuffle operation, whole data is taken out from existing partitions and equally distributed into newly formed partitions. Hence the amount of work is equally distributed among all the executors and better parallelism can be achieved.
+
+Everyone knows the difference between both 😊 but Use cases of both are imp.
+𝘂𝘀𝗲 𝗰𝗮𝘀𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗰𝗼𝗮𝗹𝗲𝘀𝗰𝗲:
+-----------------------------------
+Once all the transformations are applied and you want to save all the data into fewer files(no. of files = no.of partitions) instead of many files, use coalesce.
+ex. df.coalesce(1).write.format('json').save('myfile.json')
+
+𝘂𝘀𝗲 𝗰𝗮𝘀𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗿𝗲𝗽𝗮𝗿𝘁𝗶𝘁𝗶𝗼𝗻:
+-------------------------------------
+If you have loaded a dataset, that includes huge data, and a lot of transformations that need an equal distribution of load on executors, you need to use Repartition. Before using repartition first check how many partitions are there 
+Ex. df.rdd.getNumPartitions()
+
+
+============================================================================================================
+
+
+2) types of spark sql joins  --------  https://towardsdatascience.com/strategies-of-spark-join-c0e7b4572bcf
+
+3) skewness  https://www.clairvoyant.ai/blog/optimizing-the-skew-in-spark  , https://towardsdatascience.com/skewed-data-in-spark-add-salt-to-compensate-16d44404088b
+
+4) spark 3.0 features --- https://sparkbyexamples.com/spark/spark-3-0-features-with-examples-part-i/
+
+5) group by and reduce by  ------- https://www.edureka.co/community/11996/groupbykey-vs-reducebykey-in-apache-spark
+
+On applying groupByKey() on a dataset of (K, V) pairs, the data shuffle according to the key value K in another RDD. In this transformation, lots of unnecessary data transfer over the network.
+
+Spark provides the provision to save data to disk when there is more data shuffling onto a single executor machine than can fit in memory.
+
+Example:
+
+val data = spark.sparkContext.parallelize(Array(('k',5),('s',3),('s',4),('p',7),('p',5),('t',8),('k',6)),3)
+
+val group = data.groupByKey().collect()
+
+group.foreach(println)
+
+On applying reduceByKey on a dataset (K, V), before shuffeling of data the pairs on the same machine with the same key are combined.
+
+Example:
+
+val words = Array("one","two","two","four","five","six","six","eight","nine","ten")
+
+val data = spark.sparkContext.parallelize(words).map(w => (w,1)).reduceByKey(_+_)
+
+data.collect.foreach(println)
+
+
+6)Spark Configuration
+
+Spark properties control most application parameters and can be set by using a SparkConf object, or through Java system properties. Environment variables can be used to set per-machine settings, such as the IP address, through the conf/spark-env.sh script on each node. Logging can be configured through log4j.
+
+Where do I find Spark config?
+From the Clusters tab, select a cluster and view the Spark UI. The Environment tab shows the current Spark configuration settings.
+
+https://spark.apache.org/docs/2.3.0/configuration.html
+
+
+7)https://www.syntelli.com/eight-performance-optimization-techniques-using-spark  ---------- optimixtion techniues
+
+8)Spark collect v/s take  -------- https://findanyanswer.com/what-does-collect-do-in-spark
+
+Spark dataframe: collect () vs select () Calling collect() on an RDD will return the entire dataset to the driver which can cause out of memory and we should avoid that.
+
+Spark Take Function. In Spark, the take function behaves like an array. It receives an integer value (let say, n) as a parameter and returns an array of first n elements of the dataset.
+
+
+
+
+
+

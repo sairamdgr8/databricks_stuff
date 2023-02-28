@@ -1,0 +1,9 @@
+Problem: Constructive alogrithm
+
+Senario:
+Sai has a phone number of 10 digits with sum of its digits missing.
+Find the missing digits in the number are represented by question mark(?).But  Sai remembers that the given phone number possible divisble by 3
+
+Sample input 5?9?3????? Sample Output 5090300001 Explanation If we replace question marks in the given number 5?9?3????? by single-digit numbers, 5090300001 is the minimum possible number divisible by 2 Hence the output is 5190300000
+
+https://www.linkedin.com/pulse/find-missing-digits-number-from-given-phone-sairam-p-l

@@ -1,0 +1,9 @@
+cust_id,first_name,middle_name,last_name,birth_date,gender,yearly_income,total_children,edu,adress_1,adress_2
+241020,Jordan,C,Turner,01-09-1952,M,4270000,2,Bachelor Degree,100,new maryland
+241021,sarah,V,Simmons,17-03-1980,F,5070000,0,Graduate Degree,7005 valley oak plazza,null
+241022,latoya,L,Xu,31-12-1957,F,4130000,2,XXX College,101,nu de terre Neuve
+241023,lisa,null,Cai,04-06-1974,F,2840000,2,XXX College,102,nu de Bomi
+241024,dakota,null,Ross,21-09-1953,M,5440000,4,Graduate Degree,1024 Walnut bird,null
+241025,grace,M,Henderson,30-01-1936,F,4800000,0,Partial High school,1039,nue Mazagran
+241026,edward,J,Wood,12-06-1953,M,2170000,4,XXX College,1039 Adelaide St,null
+241027,samantha,null,James,01-01-1974,F,3080000,4,XXX College,1048 Charles carl,null

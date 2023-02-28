@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/45654658/reading-xml-with-nested-tags-into-a-spark-rdd-and-transforming-to-json
+
+
+https://sparkbyexamples.com/spark/spark-dataframe-array-of-struct/
+
+https://stackoverflow.com/questions/39275816/exploding-nested-struct-in-spark-dataframe  ----------useful
+
+https://stackoverflow.com/questions/39275816/exploding-nested-struct-in-spark-dataframe ------------most useful
+
+https://stackoverflow.com/questions/59766511/explode-nested-struct-in-spark-dataframe?noredirect=1&lq=1----may be useful
+
+https://stackoverflow.com/questions/55398372/create-a-spark-dataframe-from-a-nested-array-of-struct-element?rq=1 ---------most useful

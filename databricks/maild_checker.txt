@@ -1,0 +1,8 @@
+name,age,mail_id
+sai,25,sairamdgr8@gmail.com
+vignesh,33,vignesh@yahoo.com
+pramod,22,pramod.amthura@orkut.co.in
+gani,55,gani@yahoomessenger.co
+chirag,19,jhgbawebgk
+yash,77,khakjswfk@.makmlm
+bob,55,bober.bob

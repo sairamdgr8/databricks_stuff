@@ -1,0 +1,12 @@
+https://www.datasciencemadesimple.com/convert-to-upper-case-lower-case-and-title-case-in-pyspark/#:~:text=In%20order%20to%20convert%20a,pyspark%20uses%20initcap()%20function.
+
+
+https://linuxhint.com/pyspark-sum-avg-window-functions/
+
+
+https://sparkbyexamples.com/pyspark/pyspark-window-functions/
+
+
+
+https://help.benchling.com/en/articles/4450361-how-is-partition-by-different-from-group-by   ---------------- help to create one small blog
+

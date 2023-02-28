@@ -1,0 +1,62 @@
+root
+ |-- _capacity: double (nullable = true)
+ |-- _freespeed: double (nullable = true)
+ |-- _from: long (nullable = true)
+ |-- _id: long (nullable = true)
+ |-- _length: double (nullable = true)
+ |-- _modes: string (nullable = true)
+ |-- _oneway: long (nullable = true)
+ |-- _permlanes: double (nullable = true)
+ |-- _to: long (nullable = true)
+ |-- attributes: struct (nullable = true)-------------------------s
+ |    |-- attribute: array (nullable = true)
+ |    |    |-- element: struct (containsNull = true)-----------------s
+ |    |    |    |-- _VALUE: string (nullable = true)
+ |    |    |    |-- _class: string (nullable = true)
+ |    |    |    |-- _name: string (nullable = true)
+ 
+root
+|-- department: struct (nullable = true)
+|    |-- id: string (nullable = true)
+|    |-- name: string (nullable = true)
+|-- employees: array (nullable = true)
+|    |-- element: struct (containsNull = true)
+|    |    |-- firstName: string (nullable = true)
+|    |    |-- lastName: string (nullable = true)
+|    |    |-- email: string (nullable = true)
+|    |    |-- salary: integer (nullable = true)
+
+
+root
+ |-- _id: string (nullable = true)
+ |-- positions: struct (nullable = true)
+ |    |-- precise: struct (nullable = true)
+ |    |    |-- lat: double (nullable = true)
+ |    |    |-- lng: double (nullable = true)
+ |    |-- unprecise: struct (nullable = true)
+ |    |    |-- lat: double (nullable = true)
+ |    |    |-- lng: double (nullable = true)
+ 
+ 
+ df = rawDf.select("_id", explode(create_map(lit("class"), col("attributes.attribute._class"),
+                                         lit("name"), col("attributes.attribute._name")
+                                        )
+                             ).alias("positions_type", "pos")
+              ) \
+      .select("_id", "positions_type", "pos.*") \
+	  
+	  
+	  root
+ |-- _id: string (nullable = true)
+ |-- positions_type: string (nullable = false)
+ |-- lat: string (nullable = true)
+ |-- lng: string (nullable = true)
+ 
+ 
+ 
+ val df = rawDf.select("_id", explode(create_map(lit("precise"), col("positions.precise"),
+      lit("unprecise"), col("positions.unprecise")
+    )
+    ).alias("positions_type", "pos")
+    ) 
+    .select("_id", "positions_type", "pos.*") 

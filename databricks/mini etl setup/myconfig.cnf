@@ -1,0 +1,2 @@
+[myparam]
+sql1=select * from sales_tab limit 3

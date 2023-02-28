@@ -1,0 +1,3 @@
+name player age
+sid bat 26
+chirag bwl 25

@@ -1,0 +1,34 @@
+CREATE table emp_sal_check  (  
+    emp_name varchar(255),  
+    emp_dept varchar(255),  
+    emp_sal int  
+);
+
+
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('sai', 'A', 600);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('ram', 'B', 400);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('sree', 'A', 900);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('vemi', 'B', 1200);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('pramod', 'C', 1600);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('kumar', 'D', 1500);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('avinash', 'E', 200);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('prem', 'F', 100);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('chaintanya', 'F', 2100);
+INSERT INTO emp_sal_check (emp_name, emp_dept, emp_sal) VALUES ('dinesh', 'F', 3000);
+
+
+select *,rownumber ()
+
+select emp_name, emp_dept, emp_sal,avg(emp_sal) over (partition by emp_dept )  as avg_sal  from emp_sal_check
+
+select * from (select emp_name, emp_dept, emp_sal,avg(emp_sal) over (partition by emp_dept )  as avg_sal  from emp_sal_check) order by avg_sal desc
+
+--- done
+select * from (select emp_name, emp_dept, emp_sal,avg_sal ,dense_rank() over (  order by avg_sal desc) as dns_rnk from (select * from (select emp_name, emp_dept, emp_sal,avg(emp_sal) over (partition by emp_dept )  as avg_sal  from emp_sal_check) order by avg_sal desc)) where  dns_rnk=1
+
+
+---- select emp_name, emp_dept, emp_sal,avg_sal, dense_rank() over (partition by avg_sal order by avg_sal  ) as dns_rnk from (select emp_name, emp_dept, emp_sal,avg(emp_sal) over (partition by emp_dept )  as avg_sal  from emp_sal_check)
+
+
+
+---https://www.databasejournal.com/ms-sql/introduction-to-the-partition-by-window-function/#:~:text=A%20window%20is%20defined%20by,using%20the%20ORDER%20BY%20clause.

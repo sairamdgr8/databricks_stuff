@@ -1,0 +1,6 @@
+Name|Weight
+Roy|55
+Mary|60
+Tom|65
+Ashish|70
+Deepak|85
